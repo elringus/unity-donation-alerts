@@ -116,7 +116,7 @@ namespace UnityDonationAlerts
             // https://developers.google.com/identity/protocols/OAuth2WebServer#creatingclient
             var authRequest = string.Format("{0}?client_id={1}&redirect_uri={2}&response_type=code&scope={3}",
                 settings.GenericClientCredentials.AuthUri,
-                settings.GenericClientCredentials.ClientId,
+                settings.GenericClientCredentials.ApplicationId,
                 redirectUri,
                 settings.AccessScope);
 

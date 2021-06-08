@@ -36,10 +36,10 @@ namespace UnityDonationAlerts
             var tokenRequestForm = new WWWForm();
             tokenRequestForm.AddField("code", authorizationCode);
             tokenRequestForm.AddField("redirect_uri", redirectUri);
-            tokenRequestForm.AddField("client_id", credentials.ClientId);
+            tokenRequestForm.AddField("client_id", credentials.ApplicationId);
             tokenRequestForm.AddField("code_verifier", codeVerifier);
-            if (!string.IsNullOrEmpty(credentials.ClientSecret))
-                tokenRequestForm.AddField("client_secret", credentials.ClientSecret);
+            if (!string.IsNullOrEmpty(credentials.APIKey))
+                tokenRequestForm.AddField("client_secret", credentials.APIKey);
             tokenRequestForm.AddField("scope", settings.AccessScope);
             tokenRequestForm.AddField("grant_type", "authorization_code");
 

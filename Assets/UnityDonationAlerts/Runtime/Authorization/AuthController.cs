@@ -40,6 +40,8 @@ namespace UnityDonationAlerts
         static AuthController ()
         {
             settings = DonationAlertsSettings.LoadFromResources();
+            if (!settings || settings.GenericClientCredentials is null || !settings.GenericClientCredentials.ContainsSensitiveData)
+                throw new UnauthorizedAccessException("DonationAlerts settings are missing application ID and/or API key.");
 
             #if UNITY_WEBGL && !UNITY_EDITOR // WebGL doesn't support loopback method; using redirection scheme instead.
             accessTokenProvider = new RedirectAccessTokenProvider(settings);

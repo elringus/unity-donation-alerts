@@ -39,7 +39,7 @@ namespace UnityDonationAlerts
                     settings.GenericClientCredentials.AuthUri,
                     settings.AccessScope,
                     Uri.EscapeDataString(Application.absoluteURL),
-                    settings.GenericClientCredentials.ClientId);
+                    settings.GenericClientCredentials.ApplicationId);
 
                 Application.OpenURL(authRequest);
             }

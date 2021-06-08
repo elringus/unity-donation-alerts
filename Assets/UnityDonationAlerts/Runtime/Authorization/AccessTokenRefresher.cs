@@ -33,9 +33,9 @@ namespace UnityDonationAlerts
         {
             var refreshRequestForm = new WWWForm();
             refreshRequestForm.AddField("grant_type", "refresh_token");
-            refreshRequestForm.AddField("client_id", credentials.ClientId);
-            if (!string.IsNullOrEmpty(credentials.ClientSecret))
-                refreshRequestForm.AddField("client_secret", credentials.ClientSecret);
+            refreshRequestForm.AddField("client_id", credentials.ApplicationId);
+            if (!string.IsNullOrEmpty(credentials.APIKey))
+                refreshRequestForm.AddField("client_secret", credentials.APIKey);
             refreshRequestForm.AddField("redirect_uri", "http://localhost");
             refreshRequestForm.AddField("refresh_token", refreshToken);
 

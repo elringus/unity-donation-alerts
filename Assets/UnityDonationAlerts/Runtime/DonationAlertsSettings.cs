@@ -46,8 +46,11 @@ namespace UnityDonationAlerts
         /// </summary>
         public bool LogDebugMessages { get => logDebugMessages; set => logDebugMessages = value; }
 
-        [SerializeField] private GenericClientCredentials genericClientCredentials = default;
-        [SerializeField] private List<string> accessScopes = new List<string> { "donations.read", "donations.create", "socket.token" };
+        [SerializeField] private GenericClientCredentials genericClientCredentials;
+        [SerializeField] private List<string> accessScopes = new List<string> {
+            "oauth-user-show", "oauth-donation-subscribe", "oauth-donation-index",
+            "oauth-custom_alert-store", "oauth-goal-subscribe", "oauth-poll-subscribe"
+        };
         [SerializeField] private string loopbackUri = "http://localhost";
         [SerializeField] private string loopbackResponseHtml = "<html><h1>Please return to the app.</h1></html>";
         [SerializeField] private string accessTokenPrefsKey = "DonationAlertsAccessToken";

@@ -8,15 +8,15 @@ namespace UnityDonationAlerts
     {
         public string AuthUri { get => authUri; set => authUri = value; }
         public string TokenUri { get => tokenUri; set => tokenUri = value; }
-        public string ClientId { get => clientId; set => clientId = value; }
-        public string ClientSecret { get => clientSecret; set => clientSecret = value; }
+        public string ApplicationId { get => applicationId; set => applicationId = value; }
+        public string APIKey { get => apiKey; set => apiKey = value; }
         public List<string> RedirectUris { get => redirectUris; set => redirectUris = value; }
-        public bool ContainsSensitiveData => !string.IsNullOrEmpty(ClientId + ClientSecret);
+        public bool ContainsSensitiveData => !string.IsNullOrEmpty(ApplicationId + APIKey);
 
-        [SerializeField] private string authUri = "https://DonationAlerts.com/api/v1.0/authorize";
-        [SerializeField] private string tokenUri = "https://DonationAlerts.com/api/v1.0/token";
-        [SerializeField] private string clientId = null;
-        [SerializeField] private string clientSecret = null;
+        [SerializeField] private string authUri = "https://www.donationalerts.com/oauth/authorize";
+        [SerializeField] private string tokenUri = "https://www.donationalerts.com/oauth/token";
+        [SerializeField] private string applicationId = null;
+        [SerializeField] private string apiKey = null;
         [SerializeField] private List<string> redirectUris = new List<string> { "http://localhost" };
     }
 }

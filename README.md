@@ -35,5 +35,5 @@ private void HandleDonation (Donation donation)
 }
 ```
 
-To send a test donation use "My Messages -> Add Message" (enable show in widget toggle) on DonationAlerts panel.
+To send a test donation use "My Messages -> Add Message" (enable show in widget toggle) on DonationAlerts panel: https://www.donationalerts.com/dashboard/donations
 

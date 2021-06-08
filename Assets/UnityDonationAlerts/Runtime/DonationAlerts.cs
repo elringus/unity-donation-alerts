@@ -200,7 +200,7 @@ namespace UnityDonationAlerts
                 else if (evt.Data.StartsWith("{\"result\":{\"channel\":\"$alerts:donation")) // donation
                 {
                     var data = JsonUtility.FromJson<DonationMessage>(evt.Data).Donation;
-                    var donation = new Donation { From = data.username, Amount = $"{data.amount} {data.currency}", Message = data.message };
+                    var donation = new Donation { From = data.username, Amount = data.amount, Currency = data.currency, Message = data.message };
                     unitySyncContext.Send(SafeInokeDonation, donation);
                 }
             }

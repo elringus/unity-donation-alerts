@@ -22,7 +22,7 @@ public class SendCustomAlert : MonoBehaviour
 
     private void HandleDonation (Donation donation)
     {
-        Debug.Log($"Donation received: From: {donation.From} Message: {donation.Message} Amount: {donation.Amount}");
+        Debug.Log($"Donation received: From: {donation.From} Message: {donation.Message} Amount: {donation.Amount} {donation.Currency}");
     }
 
     [ContextMenu("Send Custom Alert")]

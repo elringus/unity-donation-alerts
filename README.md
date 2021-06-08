@@ -4,7 +4,7 @@ A client for [DonationAlerts](https://www.donationalerts.com) streaming platform
 
 ## Installation
 
-Download and import [UnityDonationAlerts.unitypackage](https://github.com/Elringus/UnityDonationAlerts/raw/master/UnityDonationAlerts.unitypackage) package.
+Download and import [UnityDonationAlerts.unitypackage](https://github.com/Elringus/UnityDonationAlerts/raw/main/UnityDonationAlerts.unitypackage) package.
 
 ## How to use
 
